@@ -1,8 +1,8 @@
-
+const ProductsData = require('../ProductsData');
 class ProductService {
 
   constructor() {
-    this.products = [];
+    this.products = ProductsData;
   }
 
 
@@ -11,11 +11,11 @@ class ProductService {
   }
 
   find() {
-    return this.products
+    return this.products;
   }
 
-  findOne() {
-
+  findOne(id) {
+    return this.products.find(item => item.id === id)
   }
 
   update() {

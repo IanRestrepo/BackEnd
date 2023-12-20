@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const UsersAPI = require('../UsersData');
-
 // [GET] Users
 
 router.get('/', (req, res) => {

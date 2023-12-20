@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const ProductsAPI = require('../ProductsData');
+// const ProductsAPI = require('../ProductsData');
+const productService = require('../Services/Product.service')
+const service = new productService();
+
 
 // [GET] Products
 
 router.get('/', (req, res) => {
+  const products = service.find();
   res.json(ProductsAPI);
 });
 
